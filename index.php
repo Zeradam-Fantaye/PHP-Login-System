@@ -35,7 +35,7 @@
       </div>
       <br><br><br> -->
       
-
+    
   		<p>
   			<a href="/PHP_Login_and_Registration_System/PHP-Login-System/login.php">Login</a>
   			<a href="/PHP_Login_and_Registration_System/PHP-Login-System/register.php">Register</a>

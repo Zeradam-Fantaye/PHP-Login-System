@@ -7,3 +7,5 @@
 
 <!-- My script -->
 <script type="text/javascript" src="/PHP_Login_and_Registration_System/PHP-Login-System/assets/js/main.js"></script>
+
+<script type="text/javascript" src="/PHP_Login_and_Registration_System/PHP-Login-System/assets/js/main2.js"></script>
