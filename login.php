@@ -5,6 +5,10 @@
 	// Require the config
 	require_once "inc/config.php"; 
 
+	//Let's do a function where no body is allowed to touch or go to
+    //the login page or the registration page while they're logged in
+    forceDashboard();
+
 ?>
 
 <!DOCTYPE html>

@@ -5,7 +5,8 @@
 	// Require the config
 	require_once "inc/config.php"; 
 
-  echo $_SESSION["user_id"] . " is your user id";
+  //Forcing someone to login
+  forcedLogIn();
 
 ?>
 
@@ -25,26 +26,18 @@
 
   <body>
 
-  	<div class="uk-section uk-container">
+    	<div class="uk-section uk-container">
+          This is dashboard page. The user is logged in
 
-  		<?php 
-  			echo "Hello world. Today is: ";
-  			echo date("Y m d");
-  		?> 
-        
-<!--       <br><br>CONNECTED: <br><br>
-      <div id="connected">
-        &nbsp;
-      </div>
-      <br><br><br> -->
-      
+          <br><br>
 
-  		<p>
-  			<a href="/PHP_Login_and_Registration_System/PHP-Login-System/login.php">Login</a>
-  			<a href="/PHP_Login_and_Registration_System/PHP-Login-System/register.php">Register</a>
-  		</p>
-  	</div>
+          You are signed in as user: 
+          <?php
+            echo $_SESSION["user_id"];
+          ?>
+    	</div>
 
-  	<?php require_once "inc/footer.php"; ?> 
+    	<?php require_once "inc/footer.php"; ?> 
+
   </body>
 </html>
