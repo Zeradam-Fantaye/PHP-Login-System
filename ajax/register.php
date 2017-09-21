@@ -29,13 +29,16 @@
 
 		$email = Filter::String($_POST["email"]);
 
-		// Make sure the user does not exist. 
-		$findUser = $con->prepare("SELECT user_id FROM new_table WHERE email = LOWER(:email) LIMIT 1 ");
-		
-		$findUser->bindParam(":email", $email, PDO::PARAM_STR);
-		$findUser->execute();
+		// Make sure the user does not exist.
 
-		if($findUser->rowCount() == 1){
+		$regQuery = "SELECT user_id FROM new_table WHERE email = LOWER(:email) LIMIT 1";
+
+		$userInfo = User::Find($regQuery, $email);
+/*		$findUser = $con->prepare($regQuery);
+		$findUser->bindParam(":email", $email, PDO::PARAM_STR);
+		$findUser->execute();*/
+
+		if($userInfo){
 			//User exists
 			// We can also check to see if they are able to log in
 			$return["error"] = "You already have an account";

@@ -6,7 +6,14 @@
 	require_once "inc/config.php"; 
 
   //Forcing someone to login
-  forcedLogIn();
+  Page::forcedLogIn();
+
+  //The user is accessible to us once we get passed to forcedLogin()
+
+  //Let's get the user id
+  $user_id = (int) $_SESSION["user_id"];
+
+  $User = new User($user_id);
 
 ?>
 
@@ -26,16 +33,24 @@
 
   <body>
 
+
+      <!-- Here we need to display the user id and email address as well -->
     	<div class="uk-section uk-container">
-          This is dashboard page. The user is logged in
+          This is dashboard page. Here is the user INFO
 
           <br><br>
 
-          You are signed in as user: 
           <?php
-            echo $_SESSION["user_id"];
+            echo "user_id: " . $User->user_id . "<br>";
+            echo "email: " . $User->email . "<br>";
+            echo "registration time: " . $User->regDate . "<br>";
+
           ?>
+          <br><br>
+          <a href="/PHP_Login_and_Registration_System/PHP-Login-System/logout.php">Logout</a>
     	</div>
+
+
 
     	<?php require_once "inc/footer.php"; ?> 
 

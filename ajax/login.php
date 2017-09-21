@@ -37,18 +37,18 @@
 
 		// Make sure the user does not exist.
 		// So here, find the user by the email address and password 
-		$findUser = $con->prepare("SELECT user_id, password FROM new_table WHERE email = LOWER(:email) LIMIT 1");
-		$findUser->bindParam(':email', $email, PDO::PARAM_STR);
-		$findUser->execute();
+		$loginQuery = "SELECT user_id, password FROM new_table WHERE email = LOWER(:email) LIMIT 1";
 
-		if($findUser->rowCount() == 1) {
+		$userInfo = User::Find($loginQuery, $email);
+
+		if($userInfo) {
 		//if(true){
 
 			//So, try to sign them in
 			//We can also check to see if they are able to log in
 		
 			//Let's pull the user_id and password
-			$User = $findUser->fetch(PDO::FETCH_ASSOC); 
+			$User = $userInfo; 
 			
 			//	The above line creates an array like
 			//		$User["user_id"] = 1

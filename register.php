@@ -7,7 +7,7 @@
 
 	//Let's do a function where no body is allowed to touch 
     //the login page or the registration page while they're logged in
-    forceDashboard();
+    Page::forceDashboard();
 
 ?>
 
