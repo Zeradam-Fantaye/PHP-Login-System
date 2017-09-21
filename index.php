@@ -28,18 +28,42 @@
   			echo "Hello world. Today is: ";
   			echo date("Y m d");
   		?> 
-        
-<!--       <br><br>CONNECTED: <br><br>
-      <div id="connected">
-        &nbsp;
-      </div>
-      <br><br><br> -->
       
-    
   		<p>
   			<a href="/PHP_Login_and_Registration_System/PHP-Login-System/login.php">Login</a>
   			<a href="/PHP_Login_and_Registration_System/PHP-Login-System/register.php">Register</a>
   		</p>
+
+      <br><br>
+      
+      <h1>Do these for personal project to further develop the system</h1>
+      <ul>
+
+        <li>CHANGE PASSWORD AND CHANGE EMAIL ONCE LOGGED IN</li>
+        <li>NEWS FEED</li>
+        <li>FRIEND FEED</li>
+        <li>RESET PASSWORD</li>
+        <li>INVITE MODULE: INVITE A FRIEND BY PUTTING THEIR EMAIL ADDRESS AND AUTOMATICALLY SEND THEM THE INVITATION</li>
+        <li>ADD FIRST NAME OR LAST NAME</li>
+        <li>ADD SMS CONFIRMATION (VIA TWILIO)</li>
+
+      </ul>
+
+      <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   	</div>
 
   	<?php require_once "inc/footer.php"; ?> 
